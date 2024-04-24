@@ -1,0 +1,186 @@
+/*========== Login css start here ===========*/
+@import "../../sass/common/common.scss";
+@import "../../sass/common/variable.scss";
+
+.login_txt_main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .login_item{
+        width: 360px;
+        .forgat_pass{
+            color: $singcolor;
+            font-size: 20px;
+            font-family: $opensans;
+            font-weight: 400;
+            margin-top: 25px;
+            cursor: pointer;
+            transition: all linear .3s;
+            &:hover{
+                text-decoration:underline ;
+            }
+        }
+        .auth_heading{
+            color: $logincolor;
+            font-size: 34px;
+            font-weight: 700;
+            font-family: $opensans;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+        }
+        .peragrap{
+            color: $scendary;
+            font-size: 20px;
+            font-weight: 400;
+            font-family: $opensans;
+        }
+        .provider_login{
+            border: 1px solid $logincolor;
+            padding: 20px 35px;
+            border-radius: 5px;
+            display: inline-flex;
+            align-items: center;
+            column-gap: 10px;
+            span{
+                color: $logincolor;
+                font-size: 14px;
+                font-weight: 600;
+                font-family: $opensans;
+            }
+        }
+        .from_main{
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 40px;
+            position: relative;
+            .error{
+                position: absolute;
+                width: 100%;
+                color: red;
+                font-family: $nunito;
+                font-size: 16px;
+                text-transform: capitalize;
+                font-weight: 500;
+                
+            }
+            .login_input_filed{
+                width: 100%;
+                color: $logincolor;
+                font-size: 14px;
+                font-family: $opensans;
+                font-weight: 400;
+                margin-bottom: 20px;
+                &::placeholder{
+                    color: $logincolor;
+                    font-size: 14px;
+                    font-family: $opensans;
+                    font-weight: 400;
+                }
+            }
+            .pass_btn{
+                border: none;
+                outline: none;
+                background: transparent;
+                cursor: pointer;
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 20px;
+            }
+            .submitBtn{
+                background-color: $primarybg !important;
+                padding: 20px 0 !important;
+                color: $commonclolor !important;
+                font-size: 20px !important;
+                font-family: $opensans !important;
+                font-weight: 600 !important;
+                text-transform: capitalize !important;
+                border-radius: 8px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            }
+        }
+        .sign_txt{
+            color: $logincolor;
+            font-size: 20px;
+            font-family: $opensans;
+            font-weight: 400;
+            margin-top: 25px;
+            a{
+                color: $singcolor;
+                font-weight: 700;
+                text-transform: capitalize;
+                padding-left: 5px;
+            }
+        }
+    }
+}
+
+
+.login_imgbox{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.forgat_pass{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    .error{
+        color: red;
+        font-family: $nunito;
+        font-size: 16px;
+        text-transform: capitalize;
+        font-weight: 500;
+        margin-top: 10px;
+                
+    }
+    .forgat_iconbtn{
+        outline: none;
+        border: none;
+        background: transparent;
+        font-size: 25px;
+        background-color: $singcolor;
+        width: 40px;
+        height: 40px;
+        color: $commonclolor;
+        position: absolute;
+        right: -30px;
+        top: -30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    h2{
+        color: $logincolor;
+        font-size: 30px;
+        font-family: $opensans;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+    .forgatbtn{
+        background-color: $primarybg !important;
+        padding: 10px 0 !important;
+        color: $commonclolor !important;
+        font-size: 20px !important;
+        font-family: $opensans !important;
+        font-weight: 600 !important;
+        text-transform: capitalize !important;
+        border-radius: 8px !important;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+    }
+}
+
+
+/*========== Login css end ===========*/

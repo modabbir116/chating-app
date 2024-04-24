@@ -1,0 +1,170 @@
+@import "../../sass/common/common.scss";
+@import "../../sass/common/variable.scss";
+
+.propile_modal{
+    position: relative;
+    .forgat_iconbtn{
+        outline: none;
+        border: none;
+        background: transparent;
+        font-size: 25px;
+        background-color: $primary;
+        width: 40px;
+        height: 40px;
+        color: $commonclolor;
+        position: absolute;
+        right: -20px;
+        top: -30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+    .profile_heading{
+        color: $primary;
+        font-size: 23px;
+        font-family: $poppins;
+        font-weight: 700;
+        margin-top: 10px;
+        text-transform: capitalize;
+        padding-bottom: 15px;
+    }
+    .profile_photo{
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    input{
+        margin-top: 20px;
+        border: none !important;
+        outline: none !important;
+        font-size: 18px;
+        font-weight: 700;
+        color: $primary;
+    }
+}
+.sideBar_box{
+    background-color: $primarybg;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 50px 0;
+    .sidebar_img_part{
+        h3{
+            color: $commonclolor;
+            font-size: 23px;
+            font-family: $poppins;
+            font-weight: 700;
+            margin-top: 10px;
+            text-transform: capitalize;
+            text-align: center;
+        }
+        .sidebar_img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            text-align: center;
+            margin: 0 auto;
+            position: relative;
+            &:hover .sider_img_overlay{
+                height: 100%;
+                opacity: 1;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .sider_img_overlay{
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                cursor: pointer;
+                opacity: 0;
+                transition: all linear .3s;
+                -webkit-transition: all linear .3s;
+                -moz-transition: all linear .3s;
+                -ms-transition: all linear .3s;
+                -o-transition: all linear .3s;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                svg{
+                    font-size: 35px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .navigation_part{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        li{
+            a{
+                color: $commonclolor;
+                padding: 15px 110px ;
+                display: inline-block;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                svg{
+                    font-size: 40px;
+                }
+                
+            }
+            .active{
+                background-color: $commonbg;
+                color: $logincolor;
+                position: relative;
+                &::after{
+                    width: 10px;
+                    height: 100%;
+                    position: absolute;
+                    content: '';
+                    right: 3px;
+                    top: 0;
+                    background-color: $primarybg;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                }
+               
+            }
+           
+        }
+    }
+
+
+    .user_login{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 40px;
+        color: $commonclolor;
+        font-weight: 600;
+        font-family: $poppins;
+        cursor: pointer;
+    }
+}

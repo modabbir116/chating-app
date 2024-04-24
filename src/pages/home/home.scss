@@ -1,0 +1,9 @@
+@import "../../sass/common/common.scss";
+@import "../../sass/common/variable.scss";
+
+.home_main{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}

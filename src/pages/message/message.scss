@@ -1,0 +1,268 @@
+@import '../../sass/common/common.scss';
+@import '../../sass/common/variable.scss';
+
+.message_main{
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    .message_user_body{
+        width: 35%;
+        height: 600px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border: 1px solid #ddd;
+        .list_heading{
+            text-transform: capitalize;
+            font-weight: 500;
+            font-family: $nunito;
+            font-size: 25px;
+            color: $commonclolor;
+            padding: 18px 23px;
+            background-color: $primarybg;
+           border-top-left-radius: 5px;
+           border-top-right-radius: 5px;
+        }
+        .sms_user_main{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            padding: 15px;
+            overflow-y: scroll;
+            .no_friend_props{
+                text-align: center;
+                margin-top: 50px;
+                
+            }
+            .sms_user_item{
+                width: 100%;
+                height: 100px;      
+                display: flex;
+                column-gap: 14px;
+                align-items: center;
+                cursor: pointer;
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+                padding: 0px 13px;
+                transition: all linear .3s;
+                -webkit-transition: all linear .3s;
+                -moz-transition: all linear .3s;
+                -ms-transition: all linear .3s;
+                -o-transition: all linear .3s;
+                &:hover{
+                    background-color: rgb(0, 0, 0, 0.1);
+                }
+                &:last-child{
+                    border-bottom: 0;
+                }
+                
+                .user_img_box{
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .friend_info_main{
+                    flex-basis: 75%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .user_name{
+                        h3{
+                            color: $primary;
+                            font-size: 18px;
+                            font-weight: 600;
+                            font-family: $poppins;
+                            text-transform: capitalize;
+                            padding-bottom: 10px;
+                        }
+                        p{
+                            color: $peracolor;
+                            font-size: 18px;
+                            font-weight: 600;
+                            font-family: $poppins;
+                            text-transform: capitalize;  
+                        }
+                    }
+                    .button{
+                        background-color: $primarybg;
+                        border-radius: 3px;
+                        color: $commonclolor;
+                        border: none;
+                        outline: none;
+                        text-transform: capitalize;
+                        padding: 14px 20px;
+                        text-transform: capitalize;
+                        font-family: $poppins;
+                        font-weight: 500;
+                        font-size: 18px;
+                        cursor: pointer;
+                    }
+                }
+            
+            } 
+        }
+    }
+    .message_user_sms{
+        width: 65%;
+        height: 600px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border: 1px solid #ddd;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .sms_box_heading{
+            text-transform: capitalize;
+            font-weight: 500;
+            font-family: $nunito;
+            font-size: 20px;
+            color: $commonclolor;
+            padding: 18px 23px;
+            background-color: $primarybg;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 15px;
+            &::after{
+                width: 15px;
+                height: 15px;
+                background-color: #00FF13;
+                border: 3px solid #fff;
+                left: 58px;
+                top: 45px;
+                position: absolute;
+                content: '';
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+            }
+            .user_img_box{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+           
+        }
+
+        .msg_main{
+            margin: 20px;
+            overflow-y: scroll;
+            .send_msg{
+                display: flex;
+                justify-content: end;
+                p{
+                    background-color: $primarybg;
+                    color: $commonclolor;
+                    font-size: 16px;
+                    padding: 12px;
+                    font-weight: 400;
+                    font-family: $nunito;
+                    border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
+                    display: inline-block;
+                    margin-top: 15px;
+                    max-width: 600px;
+                    line-height: 130%;
+                }
+            }
+            .receive_msg{
+                text-align: left;
+                p{
+                    background-color: #f0f0f0;
+                    color: black;
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-family: $poppins;
+                    padding: 12px;
+                    border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
+                    display: inline-block;
+                    margin-top: 15px;
+                    max-width: 600px;
+                    line-height: 130%;
+                }
+            }
+            
+        }
+
+        .msg_footer{
+            width: 100%;
+            height: 70px;
+            padding: 10px 20px;
+            
+            .msg_input{
+               width: 60%;
+               height: 100%;
+               border: transparent;
+               outline: none;
+               border-radius: 5px;
+               -webkit-border-radius: 5px;
+               -moz-border-radius: 5px;
+               -ms-border-radius: 5px;
+               -o-border-radius: 5px;
+               padding: 0 20px;
+               font-size: 20px;
+               background-color: #ddd;
+               box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            } 
+            .msg_send_btn{
+               border: none;
+               outline: none;
+               height: 100%;
+               padding: 0 20px;
+               background-color: #ddd;
+               font-size: 20px;
+               text-transform: capitalize;
+               border-radius: 5px;
+               -webkit-border-radius: 5px;
+               -moz-border-radius: 5px;
+               -ms-border-radius: 5px;
+               -o-border-radius: 5px;
+               font-weight: 500;
+               font-family: $opensans;
+               cursor: pointer;
+               box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+               margin-left: 20px;
+            }
+
+        } 
+      
+        
+    }
+    .select_user{
+        text-align: center;
+        width: 65%;
+        margin-top: 100px;
+        h2{
+            text-decoration: underline;
+            font-size: 30px;
+            font-weight: 600;
+            font-family: $opensans;
+
+        }
+    }
+}
